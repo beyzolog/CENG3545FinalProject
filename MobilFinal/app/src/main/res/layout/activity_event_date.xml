@@ -1,0 +1,159 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Date Question -->
+    <TextView
+        android:id="@+id/date_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do you have a date in mind?"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Start Date Input -->
+    <TextView
+        android:id="@+id/start_date_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Start Date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/date_question" />
+
+    <EditText
+        android:id="@+id/start_date_input"
+        android:layout_width="352dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="8dp"
+        android:hint="dd/mm/yy"
+        android:inputType="date"
+        app:layout_constraintEnd_toStartOf="@id/calendar_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/start_date_label"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <!-- Calendar Icon -->
+    <ImageView
+        android:id="@+id/calendar_icon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_calendar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/start_date_label" />
+
+    <!-- Start Time (Optional) -->
+
+    <!-- End Time (Optional) -->
+
+    <!-- How many guests? -->
+
+    <!-- Guest Count Input -->
+
+    <!-- View Menu Button -->
+
+    <TextView
+        android:id="@+id/start_time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Start time (optional)"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/start_time_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_date_input"
+        app:layout_constraintVertical_bias="0.593" />
+
+    <EditText
+        android:id="@+id/start_time_input"
+        android:layout_width="177dp"
+        android:layout_height="61dp"
+        android:hint="HH:MM"
+        android:inputType="time"
+        app:layout_constraintBottom_toTopOf="@+id/guest_count_question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <TextView
+        android:id="@+id/end_time_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="End time (optional)"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/end_time_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/start_time_label"
+        app:layout_constraintTop_toBottomOf="@+id/start_date_input" />
+
+    <EditText
+        android:id="@+id/end_time_input"
+        android:layout_width="172dp"
+        android:layout_height="61dp"
+        android:hint="HH:MM"
+        android:inputType="time"
+        app:layout_constraintBottom_toTopOf="@+id/guest_count_question"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/start_time_input"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <TextView
+        android:id="@+id/guest_count_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="351dp"
+        android:text="How many guests are you expecting?"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/start_date_input"
+        app:layout_constraintVertical_bias="0.632" />
+
+    <TextView
+        android:id="@+id/guest_count_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="60dp"
+        android:text="Guest count:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guest_count_question" />
+
+    <EditText
+        android:id="@+id/guest_count_input"
+        android:layout_width="134dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="44dp"
+        android:hint="100"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guest_count_label"
+        app:layout_constraintTop_toBottomOf="@id/guest_count_question" />
+
+    <Button
+        android:id="@+id/view_menu_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:backgroundTint="#4CAF50"
+        android:text="View Menu Options"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guest_count_input" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
